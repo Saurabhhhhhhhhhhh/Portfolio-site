@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saurabh | Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  background: radial-gradient(circle at top, #111, #000);
+  color: white;
+  font-family: sans-serif;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.card {
+  transition: 0.3s;
+  background: rgba(255,255,255,0.02);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(0,255,255,0.1);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.7s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+img {
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="section flex-col text-center">
+  <h1 class="text-5xl font-semibold">Saurabh Thakre</h1>
+  <p class="text-gray-400 mt-4 text-lg">
+    Data Analyst focused on building practical, insight-driven solutions.
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section class="section text-center max-w-3xl mx-auto">
+  <p class="text-xl text-gray-300 leading-relaxed">
+    I work with data to understand patterns, improve decision-making, and build systems that are both reliable and usable.  
+    My focus is on combining analytical thinking with real-world applications across business and finance.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section class="section flex-col">
+  <h2 class="text-3xl mb-16">Projects</h2>
+
+  <div class="grid md:grid-cols-2 gap-12 max-w-6xl w-full">
+
+    <!-- Bamboo Project -->
+    <div class="card border border-gray-700 p-6 rounded-xl fade">
+      
+      <img src="Bamboo.jpg"
+           class="mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-xl font-semibold mb-3">BambooKraft – Business Website</h3>
+
+      <p class="text-gray-400 mb-4">
+        Designed and developed a business website for a bamboo supply operation, focusing on usability and customer enquiries.
+      </p>
+
+      <ul class="text-sm text-gray-500 mb-4">
+        <li>• Structured product catalog</li>
+        <li>• Enquiry and quotation system</li>
+        <li>• Clean and business-focused UI</li>
+      </ul>
+
+      <div class="flex gap-4">
+        <a href="BambooKraft.html" target="_blank"
+          class="border px-4 py-2 rounded hover:bg-white hover:text-black">
+          Live Demo
+        </a>
+
+        <a href="https://github.com/Saurabhhhhhhhhhhh/BambooKraft" target="_blank"
+          class="border px-4 py-2 rounded hover:bg-white hover:text-black">
+          Code
+        </a>
+      </div>
+    </div>
+
+    <!-- BFSI Project -->
+    <div class="card border border-gray-700 p-6 rounded-xl fade">
+
+      <img src="Stock.jpg"
+           class="mb-4 w-full h-48 object-cover">
+
+      <h3 class="text-xl font-semibold mb-3">BFSI Stock Analysis</h3>
+
+      <p class="text-gray-400 mb-4">
+        Developed a data analytics application to analyze stock trends and build predictive models.
+      </p>
+
+      <ul class="text-sm text-gray-500 mb-4">
+        <li>• Data preprocessing and cleaning</li>
+        <li>• Feature engineering for financial indicators</li>
+        <li>• Random Forest model implementation</li>
+      </ul>
+
+      <p class="text-xs text-gray-600">
+        Python • Pandas • Scikit-learn • Streamlit
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section flex-col text-center">
+  <h2 class="text-3xl mb-8">Approach</h2>
+
+  <div class="space-y-4 text-gray-300 text-lg">
+    <p>Focus on data accuracy before analysis</p>
+    <p>Prioritize clarity in outputs</p>
+    <p>Build solutions that are practical and scalable</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section flex-col text-center">
+  <h2 class="text-3xl mb-6">Contact</h2>
+
+  <p class="text-gray-400 mb-6">
+    Open to opportunities in data analysis and analytics projects.
+  </p>
+
+  <div class="flex gap-6 flex-wrap justify-center">
+    <a href="https://github.com/Saurabhhhhhhhhhhh" target="_blank"
+      class="border px-6 py-2 rounded hover:bg-white hover:text-black">
+      GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/in/saurabh-t-803b8021b/" target="_blank"
+      class="border px-6 py-2 rounded hover:bg-white hover:text-black">
+      LinkedIn
+    </a>
+
+    <a href="mailto:saurabhthakre888@gmail.com"
+      class="border px-6 py-2 rounded hover:bg-white hover:text-black">
+      Email
+    </a>
+  </div>
+</section>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
