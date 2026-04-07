@@ -1,0 +1,1 @@
+This portfolio presents my work in data analytics and web development, with a focus on building practical, real-world solutions. It includes projects that combine data processing, analysis, and user-focused design. The goal is to demonstrate clear thinking, technical skills, and the ability to turn complex problems into usable outcomes.
